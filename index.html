@@ -37,6 +37,10 @@
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: true; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;"
   >
+    <a-assets>
+    <video id="corgi" autoplay loop="true" src="corgi.mov"></video>
+    </a-assets>
+    
     <!-- a-nft is the anchor that defines an Image Tracking entity -->
     <!-- on 'url' use the path to the Image Descriptors created before. -->
     <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball' -->
@@ -50,7 +54,8 @@
       emitevents="true"
     >
       <!-- Add content here -->
-      
+      <a-video src="#corgi" width="16" height="9" position="0 0 0"></a-video>
+
     </a-nft>
     <!-- static camera that moves according to the device movemenents -->
     <a-entity camera></a-entity>
